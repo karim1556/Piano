@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Piano Application</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .white-key {
+            width: 4rem;
+            height: 12rem;
+            background-color: white;
+            border: 1px solid black;
+            border-radius: 0.5rem;
+        }
+        .black-key {
+            width: 3rem;
+            height: 8rem;
+            background-color: black;
+            color: white;
+            border-radius: 0.5rem;
+            margin-left: -1.5rem;
+            z-index: 10;
+            position: relative;
+        }
+        .piano-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background-color: #f0f0f0;
+        }
+    </style>
+</head>
+<body class="bg-gray-200">
+    
+    <div class="piano-container">
+        <h1 class="text-4xl font-bold mb-8 text-gray-700">Piano App</h1>
+        <div class="flex space-x-1">
+            <button onclick="playSound('C')" class="white-key"></button>
+            <button onclick="playSound('CC')" class="black-key -ml-4"></button>
+
+            <button onclick="playSound('D')" class="white-key"></button>
+            <button onclick="playSound('DD')" class="black-key -ml-4"></button>
+
+            <button onclick="playSound('E')" class="white-key"></button>
+
+            <button onclick="playSound('F')" class="white-key"></button>
+            <button onclick="playSound('FF')" class="black-key -ml-4"></button>
+
+            <button onclick="playSound('G')" class="white-key"></button>
+            <button onclick="playSound('GG')" class="black-key -ml-4"></button>
+
+            <button onclick="playSound('A')" class="white-key"></button>
+            <button onclick="playSound('AA')" class="black-key -ml-4"></button>
+
+            <button onclick="playSound('B')" class="white-key"></button>
+
+            <button onclick="playSound('C2')" class="white-key"></button>
+        </div>
+    </div>
+
+  <script src="script.js"></script>  
+</body>
+</html>
